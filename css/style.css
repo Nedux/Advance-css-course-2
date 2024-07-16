@@ -20,6 +20,15 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr); }
 
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--dark {
+    color: #54483A; }
+
 .sidebar {
   background-color: #c69963;
   grid-row: 1 / -1; }
@@ -35,34 +44,34 @@ body {
 .features {
   grid-column: 3 / 11;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 30%));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 5rem;
   justify-content: center;
   font-size: 1.6rem;
   margin: 15rem 0; }
-  .features__feature {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content 1fr;
-    row-gap: 1rem;
-    column-gap: 2rem;
-    align-items: center; }
-  .features__icon {
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  align-items: center; }
+  .feature__icon {
     fill: #c69963;
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 3.8rem;
+    height: 3.8rem;
     display: inline;
     grid-column: 1 / 2;
     grid-row: 1 / 2; }
-  .features__header {
+  .feature .heading-4 {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    font-size: 1.9rem;
-    color: #54483A; }
-  .features__desc {
+    grid-row: 1 / 2; }
+  .feature__desc {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    align-self: start; }
 
 .story__pictures {
   background-color: #c69963;
