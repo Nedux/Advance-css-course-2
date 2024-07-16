@@ -3,6 +3,25 @@
     font-weight: 400;
 }
 
+.heading-2{
+    @extend %heading;
+    color: $color-grey-dark-1;
+    font-style: italic;
+    font-size: 4rem;
+    line-height: 1;
+
+}
+
+.heading-3{
+    @extend %heading;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    &--primary{
+        color: $color-primary;
+    }
+}
+
 .heading-4{
     @extend %heading;
     font-size: 1.9rem;

@@ -39,3 +39,18 @@ body{
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: 8rem minmax(6rem,1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem,1fr);
 }
+
+.btn{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    padding: 1.8rem 3rem;
+    border: none;
+    transition: all .2s;
+    
+    &:hover{
+        cursor: pointer;
+        background-color: $color-primary-dark;
+    }
+}
