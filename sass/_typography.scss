@@ -5,10 +5,13 @@
 
 .heading-2{
     @extend %heading;
-    color: $color-grey-dark-1;
     font-style: italic;
     font-size: 4rem;
     line-height: 1;
+
+    &--dark{
+        color: $color-grey-dark-1;
+    }
 
 }
 
@@ -30,3 +33,4 @@
         color: $color-grey-dark-1;
     }
 }
+
