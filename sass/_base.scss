@@ -37,7 +37,13 @@ body{
 .container{
     display: grid;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: 8rem minmax(6rem,1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem,1fr);
+    grid-template-columns: 
+        $side-bar-col-width 
+        minmax(6rem,1fr) 
+        repeat(
+            $global-grid-col-count, 
+            minmax(min-content, $global-grid-max-col-size)) 
+        minmax(6rem,1fr);
 }
 
 .btn{
