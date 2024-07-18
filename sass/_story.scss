@@ -34,13 +34,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        
-        .story{
-            &__text{
-                font-size: 1.5rem;
-                font-style: italic;
-            }
+        > * {
+            max-width: 60rem;
         }
+    }
+    &__text{
+        font-size: 1.5rem;
+        font-style: italic;
     }
 
 }
