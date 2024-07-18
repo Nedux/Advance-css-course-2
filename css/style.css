@@ -153,21 +153,19 @@ body {
   margin: 15rem 0;
   grid-column: 3 / 11;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem; }
   .homes .home-card {
     background-color: #f9f7f6;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, max-content); }
+    display: grid; }
     .homes .home-card__picture {
       width: 100%;
       grid-row: 1 / 2; }
     .homes .home-card__heart-icon {
       fill: #c69963;
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
       position: absolute;
       margin: 1rem;
       right: 0;
@@ -178,7 +176,7 @@ body {
       text-align: center;
       width: 85%;
       margin: 0 auto;
-      margin-top: -2rem; }
+      margin-top: -2.5rem; }
     .homes .home-card__specs-wrap {
       padding: 3rem 2rem;
       grid-row: 3 / 4;

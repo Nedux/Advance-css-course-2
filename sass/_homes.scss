@@ -2,16 +2,13 @@
     margin: 15rem 0;
     grid-column: 3 / 11;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 7rem;
-    
 
     .home-card{
         background-color: $color-grey-light-1;
         position: relative;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, max-content);
 
         &__picture{
             width: 100%;
@@ -20,8 +17,8 @@
 
         &__heart-icon{
             fill: $color-primary;
-            width: 2rem;
-            height: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
             position: absolute;
             margin: 1rem;
             right: 0;
@@ -34,7 +31,7 @@
             text-align: center;
             width: 85%;
             margin: 0 auto;
-            margin-top: -2rem;
+            margin-top: -2.5rem;
             
         }
         
