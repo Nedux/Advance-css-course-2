@@ -104,46 +104,40 @@ body {
       top: -1.5rem; }
 
 .header {
-  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/hero.jpeg);
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
   background-size: cover;
+  background-position: center;
   grid-column: 2 / span 7;
   display: grid;
-  grid-template-rows: 1fr repeat(3, min-content) 1fr min-content;
-  grid-template-columns: minmax(min-content, 100%);
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   justify-content: center;
-  padding: 6rem 8rem; }
+  padding: 4rem 8rem 6rem; }
   .header__logo {
     height: 3rem;
     justify-self: center; }
   .header__btn {
-    justify-self: start; }
+    justify-self: start;
+    align-self: flex-start; }
   .header__seen-on {
     color: #aaa;
     font-size: 1.6rem;
-    width: 100%;
-    justify-self: center;
-    align-self: end;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    gap: 0 2rem;
     align-items: center; }
-    .header__seen-on::before {
+    .header__seen-on::before, .header__seen-on::after {
       content: "";
       display: block;
       height: 1px;
-      width: 44%;
-      background-color: #aaa; }
-    .header__seen-on::after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 44%;
-      background-color: #aaa; }
+      background-color: currentColor; }
   .header__company-logos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    justify-items: center; }
   .header__company-logo {
+    justify-self: center;
     max-height: 2.5rem;
     filter: brightness(70%); }
 
