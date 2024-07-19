@@ -1,4 +1,60 @@
 .header{
-    background-color: $color-grey-dark-1;
+    background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)), url(../img/hero.jpeg);
+    background-size: cover;
     grid-column: 2 / span 7;
+    display: grid;
+    grid-template-rows: 1fr repeat(3, min-content) 1fr min-content;
+    grid-template-columns: minmax(min-content, 100%);
+    justify-content: center;
+    padding: 6rem $side-bar-col-width;
+
+    &__logo{
+        height: 3rem;
+        justify-self: center;
+    }
+
+    &__btn{
+        justify-self: start;
+    }
+
+    &__seen-on{
+        color: $color-grey-light-2;
+        font-size: 1.6rem;
+        width: 100%;
+        justify-self: center;
+        align-self: end;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::before{
+            content: "";
+            display: block;
+            height: 1px;
+            width: 44%;
+            background-color: $color-grey-light-2;;
+        }
+        &::after{
+            content: "";
+            display: block;
+            height: 1px;
+            width: 44%;
+            background-color: $color-grey-light-2;;
+        }
+        
+    }
+
+    // TODO: probs best to rework with css grid for responsiveness
+    &__company-logos{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    &__company-logo{
+        max-height: 2.5rem;
+        filter: brightness(70%);
+    }
+
 }
