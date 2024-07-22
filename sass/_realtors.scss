@@ -7,6 +7,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include respond(tab-port-1){
+        grid-column: content-start / -1;
+    }
+    
     &__list{
         align-items: center;
         display: grid;
@@ -14,6 +18,10 @@
         text-align: left;
         justify-content: center;
         gap: 5vh 2rem;
+    
+        @include respond(tab-port-1){
+            grid-template-columns: repeat(3, 7rem max-content);
+        }
     }
 
     &__avatar{

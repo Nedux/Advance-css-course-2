@@ -1,11 +1,14 @@
 .homes{
     grid-column: col-start 1 / content-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 7rem;
     
     @include respond(tab-port){
         gap: 6rem;
+    }
+    @include respond(tab-land-1){
+        gap: 3rem;
     }
 
     .home-card{
@@ -40,10 +43,15 @@
         
         &__specs-wrap{
             padding: 3rem 2rem;
+            width: 100%;
             grid-row: 3 / 4;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem 5rem;
+
+            @include respond(tab-port){
+                gap: 2rem 3rem;
+            }
 
             > div{
                 display: flex;

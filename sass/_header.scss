@@ -8,12 +8,27 @@
     grid-template-columns: minmax(min-content, max-content);
     justify-content: center;
     padding: 4rem $side-bar-col-width 6rem;
-    margin-left: -2px;
-    z-index: -1;
+    margin-right: -2px;  // For weird line between header and realtors sections
+
+    @include respond(tab-port){
+        padding-left: $side-padding-col-width;
+        padding-right: $side-padding-col-width;
+    }
+
+    @include respond(tab-port-1){
+        grid-column: content-start / -1;
+        margin-right: 0;
+        margin-bottom: -2px; 
+    }
 
     &__logo{
         height: 3rem;
         justify-self: center;
+
+        @include respond(tab-port){
+            margin-top: 2rem;
+            height: 4rem;
+        }
     }
 
     &__btn{

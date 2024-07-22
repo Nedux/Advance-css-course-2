@@ -5,6 +5,14 @@
     gap: 5rem;
     justify-content: center;
     font-size: 1.6rem;
+
+    @include respond(tab-land-1){
+        gap: 5rem 2rem;
+    }
+    
+    @include respond(tab-port){
+        gap: 5rem 3rem;
+    }
 }
 
 .feature{

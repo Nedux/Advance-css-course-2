@@ -12,12 +12,25 @@
         list-style: none;
         display: flex;
         justify-content: space-between;
+        @include respond(tab-port-1){
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__nav-item{
+        @include respond(tab-port-1){
+            width: 15rem;
+        }
         padding: 1.5rem;
         transition: all .2s;
         text-align: center;
+        @include respond(tab-port-1){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
 
         &:hover{
             cursor: pointer;
@@ -27,6 +40,7 @@
     }
     
     &__nav-link, &__nav-link:visited{
+        display: inline;
         text-decoration: none;
         text-transform: uppercase;
         color: white;

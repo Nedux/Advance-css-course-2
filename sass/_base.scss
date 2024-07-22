@@ -45,22 +45,26 @@ body{
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: 
         [full-start] $side-bar-col-width 
-        [content-start] minmax(6rem,1fr) 
+        [content-start] minmax($side-padding-col-width,1fr) 
         repeat(
             $global-grid-col-count, 
             [col-start] minmax(min-content, $global-grid-max-col-size) [col-end]) 
         [content-end]
-        minmax(6rem,1fr) [full-end];
+        minmax($side-padding-col-width,1fr) [full-end];
 
     @include respond(tab-port){
         grid-template-rows: 7rem 80vh min-content 40vw repeat(3, min-content);
         grid-template-columns: 
-            [content-start] minmax(6rem,1fr) 
+            [content-start] minmax($side-padding-col-width,1fr) 
              repeat(
                 $global-grid-col-count, 
                 [col-start] minmax(min-content, $global-grid-max-col-size) [col-end]) 
             [content-end]
-            minmax(6rem,1fr) [full-end];
+            minmax($side-padding-col-width,1fr) [full-end];
+    }
+    
+    @include respond(tab-port-1){
+        grid-template-rows: 7rem calc(100vh - 7rem) repeat(6, min-content);
     }
 }
 

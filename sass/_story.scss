@@ -1,12 +1,18 @@
 .story{
     &__pictures{
-        background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+        background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(../img/back.jpg);
         background-size: cover;
         grid-column: content-start / span 5;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, 1fr);
-
+        
+        @include respond(tab-port-1){
+            grid-template-rows: 5rem repeat(4, 1fr) 5rem;
+            grid-template-columns: $side-padding-col-width repeat(4, 1fr) $side-padding-col-width;
+            grid-column: content-start / -1;
+        }
+        
         .picture{
             align-self: center;
             &--1{
@@ -14,6 +20,10 @@
                 width: 100%;
                 grid-column: 2 / 6;
                 grid-row: 2 / 6;
+                
+                @include respond(tab-port-1){
+                    grid-column: 2 / 5;
+                }
             }
             &--2{
                 box-shadow: 0 2rem 5rem rgba(#000, .2);
@@ -21,6 +31,13 @@
                 z-index: 20;
                 grid-row: 4 / 6;
                 grid-column:  4 / 7;
+                
+                @include respond(tab-port-1){
+                    grid-column:  3 / 6;
+                    grid-row: 2 / 5;
+                    width: 80%;
+                    justify-self: right;
+                }
             }
         }
     }
@@ -30,8 +47,15 @@
         grid-column: col-start 5 / -1;
         background-color: $color-grey-light-1;
         padding: 6rem 18%;
+        
         @include respond(tab-land){
             padding-right: 6rem;
+        }
+        
+        @include respond(tab-port-1){
+            grid-column: content-start / -1;
+            grid-row: 5 / 6;
+            padding: 6rem $side-padding-col-width;
         }
 
         display: flex;
