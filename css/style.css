@@ -157,7 +157,7 @@ body {
     grid-template-columns: 7rem max-content;
     text-align: left;
     justify-content: center;
-    gap: 4rem 2rem; }
+    gap: 5vh 2rem; }
   .realtors__avatar {
     max-width: 7rem;
     border-radius: 50%; }
