@@ -1,9 +1,12 @@
 .homes{
-    margin: 15rem 0;
-    grid-column: 3 / 11;
+    grid-column: col-start 1 / content-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 7rem;
+    
+    @include respond(tab-port){
+        gap: 6rem;
+    }
 
     .home-card{
         background-color: $color-grey-light-1;

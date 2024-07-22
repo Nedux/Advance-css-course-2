@@ -1,7 +1,7 @@
 .footer{
     padding: 6rem;
     background-color: $color-secondary;
-    grid-column: 2 / -1;
+    grid-column: content-start / -1;
     
     &__navigation{
         max-width: $footer-max-width;

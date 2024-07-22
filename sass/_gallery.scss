@@ -1,6 +1,6 @@
 .gallery{
     background-color: $color-grey-light-1;
-    grid-column: 2 / 12;
+    grid-column: content-start / -1;
     display: grid;
     padding: 1.5rem;
     grid-template-columns: repeat(8, 1fr);

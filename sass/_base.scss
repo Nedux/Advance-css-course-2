@@ -28,6 +28,9 @@ html{
     @include respond(tab-land){
         font-size: 50%;
     }
+    @include respond(tab-port){
+        font-size: 48%;
+    }
 }
 
 body{
@@ -41,12 +44,24 @@ body{
     display: grid;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: 
-        $side-bar-col-width 
-        minmax(6rem,1fr) 
+        [full-start] $side-bar-col-width 
+        [content-start] minmax(6rem,1fr) 
         repeat(
             $global-grid-col-count, 
-            minmax(min-content, $global-grid-max-col-size)) 
-        minmax(6rem,1fr);
+            [col-start] minmax(min-content, $global-grid-max-col-size) [col-end]) 
+        [content-end]
+        minmax(6rem,1fr) [full-end];
+
+    @include respond(tab-port){
+        grid-template-rows: 7rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: 
+            [content-start] minmax(6rem,1fr) 
+             repeat(
+                $global-grid-col-count, 
+                [col-start] minmax(min-content, $global-grid-max-col-size) [col-end]) 
+            [content-end]
+            minmax(6rem,1fr) [full-end];
+    }
 }
 
 .btn{

@@ -1,11 +1,10 @@
 .features{
-    grid-column: 3 / 11;
+    grid-column: col-start 1 / content-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 5rem;
     justify-content: center;
     font-size: 1.6rem;
-    margin: 15rem 0;
 }
 
 .feature{

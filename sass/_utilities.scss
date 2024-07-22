@@ -8,6 +8,16 @@
     margin-bottom: 4rem;
 }
 
+.mtb-xl{
+    margin: 15rem 0;
+    @include respond(tab-land){
+        margin: 10rem 0;
+    }
+    @include respond(tab-port){
+        margin: 8rem 0;
+    }
+}
+
 // CSS grid/design widths 
 $global-grid-max-col-size: 14rem;
 $global-grid-col-count: 8;
