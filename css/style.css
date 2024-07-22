@@ -147,7 +147,10 @@ body {
   background-color: #101d2c;
   grid-column: 9 / -1;
   padding: 12rem 8rem;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .realtors__list {
     align-items: center;
     display: grid;
