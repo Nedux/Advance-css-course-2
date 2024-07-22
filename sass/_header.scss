@@ -8,6 +8,8 @@
     grid-template-columns: minmax(min-content, max-content);
     justify-content: center;
     padding: 4rem $side-bar-col-width 6rem;
+    margin-left: -2px;
+    z-index: -1;
 
     &__logo{
         height: 3rem;
@@ -41,11 +43,13 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 3rem;
         justify-items: center;
+        align-items: center;
     }
     
     &__company-logo{
         justify-self: center;
         max-height: 2.5rem;
+        max-width: 100%;
         filter: brightness(70%);
     }
 
