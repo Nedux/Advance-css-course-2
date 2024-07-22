@@ -468,6 +468,9 @@ body {
   padding: 6rem;
   background-color: #101d2c;
   grid-column: content-start / -1; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding: 3rem; } }
   .footer__navigation {
     max-width: 120rem;
     margin: 0 auto; }
