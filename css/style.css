@@ -17,6 +17,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -114,7 +117,9 @@ body {
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
   justify-content: center;
-  padding: 4rem 8rem 6rem; }
+  padding: 4rem 8rem 6rem;
+  margin-left: -2px;
+  z-index: -1; }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -137,16 +142,18 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
-    justify-items: center; }
+    justify-items: center;
+    align-items: center; }
   .header__company-logo {
     justify-self: center;
     max-height: 2.5rem;
+    max-width: 100%;
     filter: brightness(70%); }
 
 .realtors {
   background-color: #101d2c;
   grid-column: 9 / -1;
-  padding: 12rem 8rem;
+  padding: 5vh 2vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -349,7 +356,8 @@ body {
     justify-content: space-between; }
   .footer__nav-item {
     padding: 1.5rem;
-    transition: all .2s; }
+    transition: all .2s;
+    text-align: center; }
     .footer__nav-item:hover {
       cursor: pointer;
       background-color: rgba(255, 255, 255, 0.05);
