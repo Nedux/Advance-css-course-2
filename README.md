@@ -26,5 +26,6 @@ Following along [this tutorial](https://www.udemy.com/course/advanced-css-and-sa
 
 # To run
 `npm install`
+
 `npm run start`
 
