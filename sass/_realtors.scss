@@ -22,6 +22,11 @@
         @include respond(tab-port-1){
             grid-template-columns: repeat(3, 7rem max-content);
         }
+
+        @include respond(phone){
+            grid-template-columns: 7rem max-content;
+            grid-template-rows: repeat(3, min-content);
+        }
     }
 
     &__avatar{
