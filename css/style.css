@@ -118,21 +118,34 @@ body {
       padding: 1.2rem 2rem; } }
   .sidebar__burger-wrap {
     width: 4.5rem;
-    padding: 2rem 0 2rem 0; }
+    padding: 2rem 0 2rem 0;
+    align-self: flex-start; }
     .sidebar__burger-wrap:hover {
       cursor: pointer; }
+  .sidebar__burger-wrap:hover .sidebar__burger-icon::after {
+    animation-name: burger-hover-bottom; }
+  .sidebar__burger-wrap:hover .sidebar__burger-icon::before {
+    animation-name: burger-hover-top; }
+  .sidebar__burger-wrap:hover .sidebar__burger-icon {
+    background-color: transparent; }
   .sidebar__burger-icon {
     display: block;
     background-color: white;
     height: .3rem;
-    position: relative; }
+    position: relative;
+    user-select: none;
+    transition: all .5s; }
     .sidebar__burger-icon::after, .sidebar__burger-icon::before {
       content: "";
       background-color: white;
       width: 100%;
       height: .3rem;
       display: block;
-      position: absolute; }
+      position: absolute;
+      animation-timing-function: ease-in;
+      animation-duration: .5s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards; }
     .sidebar__burger-icon::after {
       top: 1.5rem; }
     .sidebar__burger-icon::before {
@@ -514,3 +527,25 @@ body {
   .footer__course-link, .footer__course-link:visited {
     color: #c69963;
     font-family: "Josefin Sans", sans-serif; }
+
+@keyframes burger-hover-top {
+  0% {
+    transform: rotate(0);
+    top: -1.5rem; }
+  50% {
+    transform: rotate(0);
+    top: 0; }
+  100% {
+    transform: rotate(-45deg);
+    top: 0; } }
+
+@keyframes burger-hover-bottom {
+  0% {
+    transform: rotate(0);
+    top: 1.5rem; }
+  50% {
+    transform: rotate(0);
+    top: 0; }
+  100% {
+    transform: rotate(45deg);
+    top: 0; } }

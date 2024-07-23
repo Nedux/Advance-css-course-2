@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+
     @include respond(tab-port){
         grid-column: 1 / -1;
         grid-row: 1 / 2;
@@ -14,10 +15,22 @@
     &__burger-wrap{
         width: 4.5rem;
         padding: 2rem 0 2rem 0;
-        
+        align-self: flex-start;
+
         &:hover{
             cursor: pointer;
         }
+    }
+    &__burger-wrap:hover &__burger-icon::after{
+        animation-name: burger-hover-bottom;
+    }
+    
+    &__burger-wrap:hover &__burger-icon::before{
+        animation-name: burger-hover-top;
+    }
+    
+    &__burger-wrap:hover &__burger-icon{
+        background-color: transparent;
     }
     
     &__burger-icon{
@@ -25,6 +38,8 @@
         background-color: white;
         height: .3rem;
         position: relative;
+        user-select: none;
+        transition: all .5s;
         
         &::after,
         &::before{
@@ -34,6 +49,10 @@
             height: .3rem;
             display: block;
             position: absolute;
+            animation-timing-function: ease-in;
+            animation-duration: .5s;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
         }
 
         &::after{

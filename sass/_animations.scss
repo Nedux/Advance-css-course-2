@@ -1,0 +1,35 @@
+// With js add reversal of theese animations (now it jus snaps)
+@keyframes burger-hover-top {
+    0%{
+        transform: rotate(0);
+        top: -1.5rem;
+    }
+
+    50%{
+        transform: rotate(0);
+        top: 0;
+    }
+    
+    100%{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+  
+}
+@keyframes burger-hover-bottom {
+    0%{
+        transform: rotate(0);
+        top: 1.5rem;
+    }
+
+    50%{
+        transform: rotate(0);
+        top: 0;
+    }
+    
+    100%{
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
+  
